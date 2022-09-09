@@ -1,0 +1,14 @@
+Necesitamos que crees un API en node js utilizando express js.
+
+El API debe contener los siguientes modulos
+
+- Empresas (Id, rif, descripción)  debe permitir tener sus métodos para agregar, editar, eliminar y listar
+- Categorias (Id, descripcion)
+- Modulo inventario (Id, nombre, precio, existencia, categoria a la que pertenece) relacionado.
+
+Utilizar para comunicarse con Nodejs y Mysql, objection.
+
+Una vez este el API desarrollado, notificarnos para probarlo desde la empresa.
+Nos gustaría poder ver algo ya funcional para la proxima semana.
+
+Saludos.
