@@ -9,5 +9,5 @@ API de prueba con los siguientes modulos  - Empresas (Id, rif, descripci√≥n)  m√
 
 4) /empresas  				GET 		Hace una consulta a todas las empresas dentro de la DB
 
-5) /empresas/delate:id 		GET			Busca y elimina la empresa con el ID espesificado
+5) /empresas/delate?id=valor	GET			Busca y elimina la empresa con el ID espesificado
 	
