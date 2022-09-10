@@ -6,8 +6,12 @@ const GetInicio = (req,res) => {
 //Incluyendo todos los ficheros con los controladores de la api
 const { listarEmpresas } = require('./empresas');
 const { agregarEmpresa } = require('./empresas');
+const { badUse } = require('./empresas');
+const { deleteEmpresa } = require('./empresas');
 //console.log(listarEmpresas);
 module.exports = {GetInicio,
     listarEmpresas,
-    agregarEmpresa
+    agregarEmpresa,
+    badUse,
+    deleteEmpresa
 };
