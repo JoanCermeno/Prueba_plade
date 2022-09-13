@@ -38,27 +38,24 @@ const agregarEmpresa = async (req,res) => {
             })
     }
 }
-//Eliminar empres
-
+//Eliminar empresa
 const deleteEmpresa = async (req, res)=>{
     if(req.query.id){
         let result = await Empresa.query();
         //ahora buscamos en el json que responde la db la empresa con el id correspondiente
         let encontrado = result.find(empresas => empresas.id == req.query.id);
-        if(encontrado == undefined){
-            res.json({mensaje : "Esa empresa no ha sido encontrada"});
-        }else{
-            let delate = await Empresa.query().delete().where('id', '=', encontrado.id);
-            if(delate){
-                res.json({mensaje: `La empresa ${req.query.id} ha sido eliminada :D` });
-            }
-            res.json({mensaje: `Uy algo salio mal... ERROR desconocido` });
-
-        }
-        //console.log(result);
-        //console.log(encontrado);
+        //en caso de que se activo el id por query String
+        //Verificamos si estan enviando los datos por queryString
+            if(encontrado != undefined){
+                //SI ENCONTRADO TIENE UN VALOR DISTTINO A UNDEFINE PUES ELIMNINAMOS LA EMPRESA CON ESE ID
+                let delate = await Empresa.query().delete().where('id', '=', encontrado.id);
+                if(delate){
+                    res.json({mensaje: `La empresa ${req.query.id} ha sido eliminada :D` });
+                }else{  res.json({mensaje: `Uy algo salio mal... Seguramente un error en la query de la base de datos` }); }         
+            }else{  res.json({mensaje : `La empresa con ID: ${req.query.id} no ha sido encontrada :(`}); }
     }else{
-        res.json({mensaje : "Debes enviar un query string con su clave valor id=valor"});
+
+        res.send(`Required query param ID`);
     }
 }
 
