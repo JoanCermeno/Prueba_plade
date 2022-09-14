@@ -12,10 +12,10 @@ const getProductos = async (req,res)=>{
 	}
 
 }
-//añadir productos
+//añadir productos La mas dificil xD
 const agregarProducto = async (req,res) =>{
 	//insertamos cierta cantidad de productos a una empresa.
-	
+	const productToInsert = req.body.
 }
 module.exports = {
 	getProductos
