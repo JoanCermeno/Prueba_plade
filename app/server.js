@@ -9,9 +9,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 //routers
 app.use(require('./routes'));
-
-
-
 //setting
 const port = 6969;
 app.listen(port);

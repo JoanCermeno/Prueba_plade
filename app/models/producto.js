@@ -2,7 +2,7 @@ const { Model } = require('objection');
 
 class Producto extends Model {
 	static get tableName(){
-        return 'producto';
+        return 'productos';
     }
 
     $beforInsert(){
