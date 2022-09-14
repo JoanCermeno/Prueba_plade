@@ -1,6 +1,7 @@
 const Producto = require('../models/producto');
+const Categoria = require('../models/categoria');
 
-
+//consultar productos
 const getProductos = async (req,res)=>{
 	let allProductos = await Producto.query();
 	if(allProductos){
@@ -11,7 +12,11 @@ const getProductos = async (req,res)=>{
 	}
 
 }
-
+//añadir productos
+const agregarProducto = async (req,res) =>{
+	//insertamos cierta cantidad de productos a una empresa.
+	
+}
 module.exports = {
 	getProductos
 }

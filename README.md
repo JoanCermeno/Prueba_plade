@@ -11,4 +11,4 @@ API de prueba con los siguientes modulos  - Empresas (Id, rif, descripción)  m�
 
 4) /empresas?id=valor	    <DELATE>    Busca y elimina la empresa by ID 
 
-5) /empresas/search?id=VALOR <GET>      Busca empresa por el id de la misma
+5) /empresas/search?id=VALOR <GET>      Busca empresa por id o descricción

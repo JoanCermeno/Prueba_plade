@@ -73,6 +73,17 @@ const search = async (req,res) => {
             res.json({mensaje: `Empresa con el id ${idToSearch} no existe`});
             console.log("Enviando respuesta, Empresa no encontrada")
         }
+    }else{
+        //buscamos por nombre
+        let nameToSearch = req.query.description;
+        if(nameToSearch){
+            const empresaEncontrada = await Empresa.query().findOne(
+                'description' , 'like' , `%${nameToSearch}%`
+            );      
+
+           console.log(empresaEncontrada);
+           res.json(empresaEncontrada); 
+        }
     }
 }
 

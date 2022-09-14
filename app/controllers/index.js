@@ -10,6 +10,7 @@ const { badUse } = require('./empresas');
 const { deleteEmpresa } = require('./empresas');
 const { search } = require('./empresas');
 const { getProductos } = require('./productos');
+const { agregarProducto } = require('./productos');
 //console.log(listarEmpresas);
 module.exports = {GetInicio,
     listarEmpresas,
@@ -17,5 +18,6 @@ module.exports = {GetInicio,
     search,
     deleteEmpresa,
     badUse,
-    getProductos
+    getProductos,
+    agregarProducto
 };
