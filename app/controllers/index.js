@@ -8,10 +8,12 @@ const { listarEmpresas } = require('./empresas');
 const { agregarEmpresa } = require('./empresas');
 const { badUse } = require('./empresas');
 const { deleteEmpresa } = require('./empresas');
+const { search } = require('./empresas');
 //console.log(listarEmpresas);
 module.exports = {GetInicio,
     listarEmpresas,
     agregarEmpresa,
     badUse,
+    search,
     deleteEmpresa
 };

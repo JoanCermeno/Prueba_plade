@@ -59,6 +59,23 @@ const deleteEmpresa = async (req, res)=>{
     }
 }
 
+//buscar empresas
+const search = async (req,res) => {
+    let idToSearch = req.query.id;
+    if(idToSearch){
+        let allEmpresas = await Empresa.query();
+        let empresaEncontrada = allEmpresas.find(empresas => empresas.id == req.query.id);
+        if(empresaEncontrada){
+            res.json(empresaEncontrada);
+            console.log("Enviando respuesta, Empresa encontrada")
+
+        }else{
+            res.json({mensaje: `Empresa con el id ${idToSearch} no existe`});
+            console.log("Enviando respuesta, Empresa no encontrada")
+        }
+    }
+}
+
 
 const badUse = (req,res) =>{
     res.json({
@@ -69,5 +86,6 @@ module.exports = {
     listarEmpresas,
     agregarEmpresa,
     badUse,
+    search,
     deleteEmpresa
 }
