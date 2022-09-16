@@ -11,6 +11,7 @@ const { deleteEmpresa } = require('./empresas');
 const { search } = require('./empresas');
 const { getProductos } = require('./productos');
 const { agregarProducto } = require('./productos');
+
 //console.log(listarEmpresas);
 module.exports = {GetInicio,
     listarEmpresas,

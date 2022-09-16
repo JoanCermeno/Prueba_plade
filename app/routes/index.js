@@ -11,5 +11,5 @@ router.get('/empresas/add', controllers.badUse);// Leer Readme.md
 router.get('/empresas/search', controllers.search);// Leer Readme.md
 router.delete('/empresas' , controllers.deleteEmpresa);//borrar empresa por id
 router.get('/productos' , controllers.getProductos);//borrar empresa por id
-//router.post('/productos' , controllers.agregarProducto)
+router.post('/productos' , controllers.agregarProducto);
 module.exports = router;
