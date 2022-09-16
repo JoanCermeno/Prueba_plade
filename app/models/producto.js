@@ -31,5 +31,15 @@ class Producto extends Model {
             }
         }
     }
+    static relationMappings = {
+        producto_categoria: {
+            relation : Model.HasOneRelation,
+            modelClass : Producto,
+            join: {
+                from : 'id', //PK del producto
+                to: 'id_categoria' // FK de categoria
+            }
+        }
+    }
 } 
 module.exports = Producto;
